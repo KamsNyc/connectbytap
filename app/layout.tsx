@@ -1,4 +1,5 @@
 require('dotenv').config()
+import "slick-carousel/slick/slick.css";
 import { ClerkProvider } from '@clerk/nextjs'
 import type { Metadata } from 'next'
 import { Inter, Yaldevi } from 'next/font/google'

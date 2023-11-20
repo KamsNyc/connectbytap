@@ -1,37 +1,60 @@
-import Image from "next/image";
+'use client'
 import React from "react";
-import { Button } from "@/components/ui/button"
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
+import bannerone from "../../public/bannerone.jpg";
+import bannertwo from "../../public/Shoe.jpg";
+import { Button } from "@/components/ui/button";
+import HeroText from "./HeroText";
 
 function Hero() {
+  // Slick settings
+  var settings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
+
   return (
-    <section className="w-full relative bg-black rounded-[16px]">
-      {/* HERO IMAGE */}
-      <Image
-        src={"/Photo.svg"}
-        alt="d"
-        width={1170}
-        height={657}
-        className="rounded-[16px] object-cover max-h-[657px] w-full overflow-hidden opacity-90"
-      />
+    <div className="">
+    <Slider className="" {...settings}>
+      {/* SLIDE ONE */}
+        <div className="relative">
+          {/* HERO IMAGE */}
+          <Image
+            src={bannerone}
+            alt='image'
+            width={1170}
+            height={657}
+            className="rounded-[16px] object-cover max-h-[657px] w-full overflow-hidden opacity-90"
+          />
 
-      {/* TEXT CONTAINER*/}
-      <div className="absolute translate-y-[-50%] left-[5%] top-1/2 ">
-        {/* CONTAINER */}
-        <div className="">
-            {/* HEADING */}
-            <div className="">
-          <h1 className="text-[32px] md:text-[64px] font-bold tracking-wide leading-[36px] md:leading-[64px] text-white">Step inside, for<br></br>comfort and magic<br></br>await you.</h1>
-          </div>
-            {/* SHOP BUTTON */}
-            <div className="mt-[15px] md:mt-[40px]">
-          <Button className="font-semibold text-black px-[24px] py-[17px] bg-[#C1F651] rounded-[32px]" variant="outline">View All</Button>
-          </div>
-
+          {/* TEXT CONTAINER*/}
+          <HeroText title={`Step inside, for\ncomfort and magic\nawait you.`}/>
         </div>
-      </div>
-    </section>
-  );
+        {/* SLIDE TWO */}
+        <div className="relative">
+          {/* HERO IMAGE */}
+          <Image
+            src={bannertwo}
+            alt='image'
+            width={1170}
+            height={657}
+            className="rounded-[16px] object-cover max-h-[657px] w-full overflow-hidden opacity-90"
+          />
+
+          {/* TEXT CONTAINER*/}
+          <HeroText title={`Welcome to\nTapEdge`} />
+        </div>
+    </Slider>
+  </div>
+);
 }
 
 export default Hero;
