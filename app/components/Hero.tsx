@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import bannerone from "../../public/bannerone.jpg";
 import bannertwo from "../../public/Shoe.jpg";
-import { Button } from "@/components/ui/button";
 import HeroText from "./HeroText";
 
 function Hero() {
@@ -18,6 +17,7 @@ function Hero() {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: true,
   };
 
 
@@ -28,7 +28,7 @@ function Hero() {
         <div className="relative">
           {/* HERO IMAGE */}
           <Image
-            src={bannerone}
+            src={'Photo.svg'}
             alt='image'
             width={1170}
             height={657}

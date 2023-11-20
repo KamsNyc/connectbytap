@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import TrustBadge from './components/TrustBadge'
+import Model000 from './components/Model000'
 
 export default function Home() {
   return (  
@@ -10,8 +12,16 @@ export default function Home() {
     <Navbar />
     </section>
     {/* HERO SECTION */}
-    <section className='my-[32px] max-h-[721px] border'>
+    <section className='my-[32px] h-full'>
       <Hero />
+    </section>
+
+    <section className='py-[60px]'>
+      <TrustBadge />
+    </section>
+
+    <section className='py-[80px]'>
+      <Model000 />
     </section>
    </main>
   )

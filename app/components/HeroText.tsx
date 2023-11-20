@@ -39,7 +39,7 @@ function HeroText({ title }: Props) {
             className="font-semibold text-black px-[24px] py-[17px] bg-[#C1F651] rounded-[32px]"
             variant="outline"
           >
-            View All
+            Shop Now
           </Button>
         </motion.div>
       </div>
