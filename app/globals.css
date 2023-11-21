@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -65,7 +66,40 @@
     --ring: 212.7 26.8% 83.9%;
   }
 }
- 
+
+/* CUSTOM CSS */
+.sans {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+}
+
+.sans-bold {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+}
+
+.circle {
+  width: 3125px; 
+  height: 3125px; 
+  background-color: blue;
+  opacity: 5%;
+  border-radius: 50%; 
+}
+
+.circle-content {
+  width: 100%;
+  height: 100%;
+}
+
+/* remove clerk badge */
+.cl-internal-b3fm6y {
+  display: none;
+  background-color: white !important;
+}
+
+.text-color {
+  color: #35414B;
+}
 @layer base {
   * {
     @apply border-border;

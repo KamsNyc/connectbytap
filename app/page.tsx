@@ -1,28 +1,28 @@
 import Image from 'next/image'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import TrustBadge from './components/TrustBadge'
-import Model000 from './components/Model000'
+import HeroSection from './components/HeroSection'
 
 export default function Home() {
   return (  
-   <main className='px-[16px] 2xl:px-[360px] max-w-[2560px]'>
+   <main className='px-[16px] 2xl:px-[360px]'>
+    {/* BG CIRCLE IMAGE */}
+    <div className="circle absolute bottom-[350px] lg:bottom-[100px] left-[50%] translate-x-[-50%] overflow-hidden z-[1]"></div>
+    {/* Z-CONTAINER 2 */}
+    <section className='z-[24] relative'>
     {/* NAVBAR */}
     <section className='mt-[20px]'>
     <Navbar />
     </section>
     {/* HERO SECTION */}
-    <section className='my-[32px] h-full'>
-      <Hero />
+    <section className='mt-[100px]'>
+      <HeroSection />
     </section>
+    {/* REVIEW CARD SLIDER */}
+    <section className='mt-[100px]'>
 
-    <section className='py-[60px]'>
-      <TrustBadge />
     </section>
-
-    <section className='py-[80px]'>
-      <Model000 />
     </section>
+    
    </main>
   )
 }

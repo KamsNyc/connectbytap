@@ -25,28 +25,28 @@ function Hero() {
     <div className="">
     <Slider className="" {...settings}>
       {/* SLIDE ONE */}
-        <div className="relative">
+        <div className="relative rounded-[16px] overflow-hidden">
           {/* HERO IMAGE */}
           <Image
-            src={'Photo.svg'}
+            src={bannerone}
             alt='image'
             width={1170}
             height={657}
-            className="rounded-[16px] object-cover max-h-[657px] w-full overflow-hidden opacity-90"
+            className=" object-cover max-h-[657px] w-full overflow-hidden opacity-90"
           />
 
           {/* TEXT CONTAINER*/}
           <HeroText title={`Step inside, for\ncomfort and magic\nawait you.`}/>
         </div>
         {/* SLIDE TWO */}
-        <div className="relative">
+        <div className="relative rounded-[16px] overflow-hidden">
           {/* HERO IMAGE */}
           <Image
             src={bannertwo}
             alt='image'
             width={1170}
             height={657}
-            className="rounded-[16px] object-cover max-h-[657px] w-full overflow-hidden opacity-90"
+            className="object-cover max-h-[657px] w-full overflow-hidden opacity-90"
           />
 
           {/* TEXT CONTAINER*/}

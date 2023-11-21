@@ -7,9 +7,9 @@ function Model000() {
         {/* HEADER/VIEW NOW */}
         <div className="flex items-center justify-between">
             {/* HEADER */}
-            <h1 className='font-bold text-[18px]'>Explore Model 000</h1>
+            <h1 className='font-black text-[16px]'>Explore Model 000</h1>
             {/* LINK */}
-            <Link className='underline font-semibold text-[18px]' href={'/'}>Shop Now</Link>
+            <Link className='underline font-semibold text-[16px]' href={'/'}>Shop Now</Link>
         </div>
 
         {/* FEATURED CONTAINER */}

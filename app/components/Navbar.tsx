@@ -45,16 +45,16 @@ function Navbar() {
           <FaBars size={24} className="hover:scale-105 duration-300 ease-in-out" />
         </div>
         {/* LOGO */}
-        <h1 className="uppercase font-extrabold text-[18px] tracking-wider">CONNECTbytap</h1>
+        <h1 className="uppercase font-bold text-[18px] tracking-wider sans">CONNECTbytap</h1>
         {/* NAVLINKS */}
-        <div className={`lg:flex items-center gap-6 text-[16px] font-semibold ${menuOpen ? 'bg-gray-50 p-4 pl-0 rounded-md lg:rounded-none lg:p-0 absolute top-12 space-y-1 md:space-y-0 ' : 'hidden'}`}>
+        <div className={`lg:flex items-center gap-[32px]  text-[16px] ${menuOpen ? 'bg-gray-50 p-4 pl-0 rounded-md lg:rounded-none lg:p-0 absolute top-12 space-y-1 md:space-y-0 ' : 'hidden'}`}>
           {NavLinks &&
             NavLinks.map(({ name, link }) => (
               <div key={name} className=" duration-300 ease-in-out rounded-md p-1 lg:p-0">
                 <Link
                   href={link}
                   className={`hover:underline duration-200 ease-in ${
-                    pathname === link ? "text-[#f68051]" : "text-black"
+                    pathname === link ? "text-[#f68051]" : "text-color"
                   }`}
                 >
                   {name}

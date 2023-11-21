@@ -2,10 +2,11 @@ require('dotenv').config()
 import "slick-carousel/slick/slick.css";
 import { ClerkProvider } from '@clerk/nextjs'
 import type { Metadata } from 'next'
-import { Inter, Yaldevi } from 'next/font/google'
+import { Inter, Josefin_Sans, Yaldevi } from 'next/font/google'
 import './globals.css'
 
-const inter = Yaldevi({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] })
+const josefinSans = Josefin_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,8 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className='h-full'>
+       <body className={`relative h-full antialiased overflow-x-hidden ${inter.className}`}>
+        {children}
+      </body>
     </html>
     </ClerkProvider>
   )
