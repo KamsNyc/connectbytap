@@ -11,7 +11,7 @@ export default function Home() {
    <main className=''>
 
     {/* BG CIRCLE IMAGE */}
-    <div className="circle absolute bottom-[165px] left-[50%] translate-x-[-50%] overflow-hidden z-[1]"></div>
+    {/* <div className="circle absolute bottom-[165px] left-[50%] translate-x-[-50%] overflow-hidden z-[1]"></div> */}
 
     {/* Z-CONTAINER 2 */}
     <section className='z-[24] relative'>
