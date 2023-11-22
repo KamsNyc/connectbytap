@@ -1,8 +1,28 @@
+'use client'
 import React from 'react'
 import Reviewstar from '../../public/ReviewStars.svg'
 import Image from 'next/image'
+import Link from 'next/link'
+import HeroText from './HeroText'
+import HeroCtaButton from './HeroCtaButton'
+
+
+const CompanyBadge = [
+  {'name': "AirBnb", "link": "/AirbnbLogo.png", "href":"/"},
+  {'name': "Google", "link": "/GoogleLogo.png", "href":"/"},
+  {'name': "TrustPilot", "link": "/TrustpilotLogo.png", "href":"/"},
+  {'name': "Facebook", "link": "/FacebookLogo.png", "href":"/"},
+  {'name': "TripAdvisor", "link": "/TripadvisorLogo.png", "href":"/"},
+  // {'name': "AngelList", "link": "/AngellistLogo.png"},
+  // {'name': "Homeadvisor", "link": "/HomeadvisorLogo.png"},
+  // {'name': "Healthgrades", "link": "/HealthgradesLogo.png"},
+  {'name': "Zillow", "link": "/ZillowLogo.png", "href":"/"},
+  {'name': "Thumbtack", "link": "/ThumbtackLogo.png", "href":"/"},
+]
 
 function HeroSection() {
+
+  
   return (
     <div>
       {/* Badge */}
@@ -25,15 +45,34 @@ function HeroSection() {
         </div>
       </div>
       {/* HEADING */}
-      <div className="mt-[32px] text-center font-black text-[64px] text-color leading-[72px]">
-      <h1>Boost Your Business Reviews<br></br>Let Customers Tap for Instant<br></br>Feedback</h1>
+      <div className="mt-[32px] text-center font-black text-[48px] lg:text-[64px] text-color leading-[48px] lg:leading-[72px]">
+      <HeroText />
       </div>
 
       {/* CTA BUTTON */}
       <div className="text-center mt-[60px]">
-      <button className='bg-[#0E60FF] text-white px-[45px] py-[18px] rounded-[5px] hover:scale-105 duration-300 ease-in-out'>
-        Boost Reviews Today
-      </button>
+      <HeroCtaButton />
+      </div>
+
+      {/* GET REVIEWS ON */}
+      <div className="mt-[60px] text-center">
+        <p className="text-color uppercase"><span className='font-medium sans'>ConnectByTap</span> – your shortcut to trust and increased sales.</p>
+        <div className="grid grid-cols-3 md:flex items-center justify-center gap-[32px] lg:gap-[64px]">
+        {
+          CompanyBadge.map((badge) => (
+            <div key={badge.name} className='flex items-center justify-center pt-[24px]'>
+              <Link href={badge.href}>
+              <Image
+              src={badge.link}
+              alt={`${badge.name} Badge`}
+              width={100}
+              height={36}
+              />
+              </Link>
+            </div>
+          ))
+        }
+        </div>
       </div>
     </div>
   )
