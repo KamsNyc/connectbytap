@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 function LeftTextRightImage() {
   return (
     <div className="flex items-center justify-center">
-      <div className="md:flex items-center gap-[160px]">
+      <div className="md:flex items-center gap-[120px]">
         {/* TEXT CONTAINER */}
         <div className="space-y-[32px] py-4 md:py-[24px]">
           {/* TEXT BOX 1 */}
@@ -50,8 +50,8 @@ function LeftTextRightImage() {
           </motion.div>
         </div>
          {/* IMAGE CONTAINER */}
-         <div className="w-[450px] flex items-center justify-center  overflow-hidden  my-4 md:my-[42px]">
-    <Image src="/ReviewTest.png" alt="Image" width={1500} height={1500} className="rounded-md object-cover flex items-center" />
+         <div className="w-[650px] flex items-center justify-center  overflow-hidden  my-4 md:my-[42px]">
+    <Image src="/ReviewTest.png" alt="Image" width={2250} height={2250} className="rounded-md object-cover flex items-center" />
 </div>
 
       </div>
