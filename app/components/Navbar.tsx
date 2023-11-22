@@ -45,7 +45,9 @@ function Navbar() {
           <FaBars size={24} className="hover:scale-105 duration-300 ease-in-out" />
         </div>
         {/* LOGO */}
+        <div className="pl-16 md:pl-0">
         <h1 className="uppercase font-bold text-[18px] tracking-wider sans">CONNECTbytap</h1>
+        </div>
         {/* NAVLINKS */}
         <div className={`lg:flex items-center gap-[32px]  text-[16px] ${menuOpen ? 'bg-gray-50 p-4 pl-0 rounded-md lg:rounded-none lg:p-0 absolute top-12 space-y-1 md:space-y-0 ' : 'hidden'}`}>
           {NavLinks &&
@@ -63,7 +65,7 @@ function Navbar() {
             ))}
         </div>
         {/* ACCOUNT/BAG  */}
-        <div className="flex items-center gap-[14px]">
+        <div className="flex items-center gap-4">
           {/* CART */}
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -8,7 +8,7 @@ function HeroText() {
 
 
   return (
-    <div className="mt-[32px] text-center font-black text-[48px] lg:text-[64px] text-color leading-[48px] lg:leading-[72px]">
+    <div className="mt-[32px] text-center font-black text-[48px] lg:text-[64px] text-black leading-[48px] lg:leading-[72px]">
       <motion.h1
       initial={{ y: 30, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}

@@ -79,11 +79,48 @@
 }
 
 .circle {
-  width: 3125px; 
-  height: 3125px; 
+  width: 3125px;
+  height: 3125px;
   background-color: blue;
-  opacity: 5%;
-  border-radius: 50%; 
+  opacity: 0.05; 
+  border-radius: 50%;
+  animation: colorChange 7s infinite alternate;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: #3498db; /* Blue */
+  }
+  10% {
+    background-color: #9b59b6; /* Purple */
+  }
+  20% {
+    background-color: #e74c3c; /* Red */
+  }
+  30% {
+    background-color: #f39c12; /* Orange */
+  }
+  40% {
+    background-color: #f1c40f; /* Yellow */
+  }
+  50% {
+    background-color: #2ecc71; /* Green */
+  }
+  60% {
+    background-color: #1abc9c; /* Cyan */
+  }
+  70% {
+    background-color: #3498db; /* Blue */
+  }
+  80% {
+    background-color: #87CEEB; /* Light Blue */
+  }
+  90% {
+    background-color: #1E90FF; /* Dodger Blue */
+  }
+  100% {
+    background-color: #3498db; /* Blue */
+  }
 }
 
 .circle-content {
@@ -98,13 +135,13 @@
 }
 
 .text-color {
-  color: #35414B;
+  color: #171c20;
 }
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-foreground;
   }
 }
