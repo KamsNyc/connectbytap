@@ -1,13 +1,30 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { motion } from "framer-motion";
 
 function LeftTextRightImage() {
+  const [currentImage, setCurrentImage] = useState("/AirbnbMockup.png");
+  const images = ["/GoogleMockup.png", "/AirbnbMockup.png", "/YelpMockup.png"];
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * images.length);
+      setCurrentImage(images[randomIndex]);
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [images]);
+
+  const fadeInOut = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
     <div className="flex items-center justify-center">
-      <div className="md:flex items-center gap-[120px]">
+      <div className="md:flex items-center gap-[64px]">
         {/* TEXT CONTAINER */}
         <div className="space-y-[32px] py-4 md:py-[24px] px-8 md:px-0">
           {/* TEXT BOX 1 */}
@@ -51,15 +68,14 @@ function LeftTextRightImage() {
         </div>
          {/* IMAGE CONTAINER */}
          <div className="w-[450px] md:w-[550px] flex items-center justify-center  overflow-hidden  my-4 md:my-[42px]">
-    <Image 
-    src="/AirbnbMockup.png" 
-    alt="Image" 
-    width={2250} 
-    height={2250} 
-    layout="responsive"
-    className="rounded-md object-cover flex items-center" />
-    
-</div>
+      <Image 
+        src={currentImage}
+        alt="Image" 
+        width={2250} 
+        height={2250} 
+        className="rounded-md object-cover flex items-center" 
+      />
+    </div>
 
       </div>
     </div>
