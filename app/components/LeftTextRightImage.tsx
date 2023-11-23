@@ -51,7 +51,14 @@ function LeftTextRightImage() {
         </div>
          {/* IMAGE CONTAINER */}
          <div className="w-[450px] md:w-[550px] flex items-center justify-center  overflow-hidden  my-4 md:my-[42px]">
-    <Image src="/AirbnbMockup.png" alt="Image" width={2250} height={2250} className="rounded-md object-cover flex items-center" />
+    <Image 
+    src="/AirbnbMockup.png" 
+    alt="Image" 
+    width={2250} 
+    height={2250} 
+    layout="responsive"
+    className="rounded-md object-cover flex items-center" />
+    
 </div>
 
       </div>

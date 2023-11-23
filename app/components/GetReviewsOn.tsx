@@ -28,6 +28,7 @@ function GetReviewsOn() {
              alt={`${badge.name} Badge`}
              width={100}
              height={36}
+             layout="auto"
              />
              </Link>
            </div>
