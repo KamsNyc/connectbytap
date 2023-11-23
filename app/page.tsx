@@ -33,6 +33,21 @@ export default function Home() {
     {/* REVIEW MOCKUP */}
     {/* CONTAINER */}
     <section className=' mt-[100px] px-[16px] xl:px-[135px] 2xl:px-[305px]'>
+      {/* HEADING BADGE */}
+      <div className="flex items-center justify-center">
+    <div
+      className="w-auto h-[32px] bg-[#E1EBFF] rounded-[100px] flex items-center justify-between"
+    >
+      {/* ONETAP BUTTON */}
+      <div className="bg-[#0E60FF] rounded-[32px]">
+        <h1 className="text-white font-medium px-[16px] py-[3px]">How it Works</h1>
+      </div>
+      {/* SECONDARY TEXT */}
+      <div className="flex items-center justify-center pr-[9px] py-[5px]">
+        <p className='px-[10px] text-[14px]'>Supercharge Your Reviews</p>
+      </div>
+    </div>
+    </div>
       <LeftTextRightImage />
     </section>
 
