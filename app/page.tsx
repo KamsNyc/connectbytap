@@ -7,6 +7,7 @@ import GetReviewsOn from './components/GetReviewsOn'
 import LeftTextRightImage from './components/LeftTextRightImage'
 
 export default function Home() {
+  
   return (  
    <main className=''>
 
@@ -53,10 +54,7 @@ export default function Home() {
 
     {/* REVIEW CARD PRODUCT SLIDER */}
     <section className='mt-[100px] flex items-center justify-center'>
-      <div className="grid gird-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-x-[8px] py-2 px-4 lg:px-0 gap-y-[16px] lg:gap-x-[64px] lg:gap-y-[32px]">
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
+      <div className="">
     <ProductCard />
     </div>
     </section>
