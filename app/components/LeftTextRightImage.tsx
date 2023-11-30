@@ -12,7 +12,7 @@ function LeftTextRightImage() {
     const intervalId = setInterval(() => {
       const randomIndex = Math.floor(Math.random() * images.length);
       setCurrentImage(images[randomIndex]);
-    }, 2000);
+    }, 4000);
 
     return () => clearInterval(intervalId);
   }, [images]);
