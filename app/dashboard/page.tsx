@@ -1,24 +1,26 @@
 'use client'
+// pages/dashboard.tsx
 import React, { useState } from 'react';
 import { useClerk } from '@clerk/nextjs';
 import axios from 'axios';
 
 const Dashboard: React.FC = () => {
   const { user } = useClerk();
-  const [fullName, setFullName] = useState('');
-  const [location, setLocation] = useState('');
-  const [links, setLinks] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [emailAddress, setEmailAddress] = useState('');
+  const [link, setLink] = useState('');
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const userId = user.id;
 
-    const formData = { userId, fullName, location, links };
+    const formData = { userId, firstName, lastName, emailAddress, link };
 
     try {
       // Send a POST request to your server-side API route
-      const response = await axios.post('/api/saveUserData', formData);
+      const response = await axios.post('http://localhost:8000/user', formData);
 
       // Handle the response from the server
       console.log('Data saved successfully:', response.data);
@@ -32,16 +34,20 @@ const Dashboard: React.FC = () => {
       <h1>Welcome, {user?.primaryEmailAddress.toString()}</h1>
       <form onSubmit={handleFormSubmit}>
         <label>
-          Full Name:
-          <input type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} />
+          First Name:
+          <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
         </label>
         <label>
-          Location:
-          <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} />
+          Last Name:
+          <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
         </label>
         <label>
-          Links:
-          <input type="text" value={links} onChange={(e) => setLinks(e.target.value)} />
+          Email Address:
+          <input type="text" value={emailAddress} onChange={(e) => setEmailAddress(e.target.value)} />
+        </label>
+        <label>
+          Link:
+          <input type="text" value={link} onChange={(e) => setLink(e.target.value)} />
         </label>
         <button type="submit">Submit</button>
       </form>
