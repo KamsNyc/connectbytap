@@ -19,10 +19,9 @@ const Dashboard: React.FC = () => {
     const formData = { userId, firstName, lastName, emailAddress, link };
 
     try {
-      // Send a POST request to your server-side API route
       const response = await axios.post('http://localhost:8000/user', formData);
 
-      // Handle the response from the server
+
       console.log('Data saved successfully:', response.data);
     } catch (error) {
       console.error('Error saving data:', error);

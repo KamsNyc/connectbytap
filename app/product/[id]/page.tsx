@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-const Product4 = () => {
+const ProductPage = ({params}) => {
   const [rotate, setRotate] = useState(false);
   const [count, setCount] = useState(0);
   const [reviewUrl, setReviewUrl] = useState("");
@@ -16,12 +17,24 @@ const Product4 = () => {
     }
   };
 
+  const [product, setProduct] = useState(null);
+  
+  async function FetchProducts() {
+    const res = await axios.get(`http://localhost:8000/product/${params.id}`);
+    setProduct(res.data);
+  }
+
+  useEffect(() => {
+    FetchProducts();
+  }, []);
+
+
   return (
     <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 ">
       <div className="flex justify-center items-center lg:flex-row flex-col gap-8">
         <div className="  w-full sm:w-96 md:w-8/12 lg:w-6/12 items-center">
           <p className=" focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 font-normal text-base leading-4 text-gray-600">
-            Home / Furniture / Wooden Stool
+            Home / Card / Name
           </p>
           <h2 className="font-semibold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 mt-4">
             Wooden Stool
@@ -421,4 +434,4 @@ const Product4 = () => {
   );
 };
 
-export default Product4;
+export default ProductPage;
